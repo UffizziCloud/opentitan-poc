@@ -1,0 +1,33 @@
+version: "3"
+
+x-uffizzi:
+  ingress:
+    service: opentitan
+    port: 7681
+
+services:
+
+  opentitan:
+    image: "${OPENTITAN_IMAGE}" 
+    ports:
+    - "7700:7700"
+    - "7681:7681"
+    # entrypoint: ["/bin/bash", "-c"]
+    # command: ["cd /home/dev/src && ttyd bash"]  
+    entrypoint: ["/bin/bash"] 
+    command: 
+    - "-c"
+    - "apt-get update && \ 
+      apt-get install neovim -y && \
+      apt-get install unzip -y && \ 
+      apt-get install wget -y && \
+      wget 'https://github.com/$GHA_ACTOR/$GHA_REPO/archive/refs/heads/$GHA_BRANCH.zip' && \
+      unzip $GHA_BRANCH.zip -d . && \
+      mv $GHA_REPO-$GHA_BRANCH /home/dev/src && \
+      cd /home/dev/src && \
+      ttyd bash
+      "
+    deploy:
+      resources:
+        limits:
+          memory: 4000M
