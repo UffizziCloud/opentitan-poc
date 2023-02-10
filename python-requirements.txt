@@ -42,7 +42,6 @@ types-dataclasses==0.6.6
 types-pkg_resources==0.1.3
 types-pyyaml==6.0.11
 types-tabulate==0.8.11
-
 # Dependency of sw/host/vendor/google_verible_verilog_syntax_py
 anytree==2.8.0
 
