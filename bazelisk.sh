@@ -9,6 +9,7 @@
 #
 # CI jobs should use ci/bazelisk.sh instead, which performs CI-friendly additional
 # setup.
+# Use bazel instead of sh with dockerfile
 
 set -euo pipefail
 
