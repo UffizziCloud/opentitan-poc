@@ -59,6 +59,7 @@ jobs:
           GHA_ACTOR=${{github.actor}}
           GHA_REPO=${{github.event.repository.name}}
           GHA_BRANCH=${{github.head_ref}}
+          GHA_REPOSITORY=${{github.event.repository.full_name}}
           export GHA_ACTOR GHA_REPO GHA_BRANCH
           # Render simple template from environment variables.
           envsubst < docker-compose.uffizzi.yml > docker-compose.rendered.yml
