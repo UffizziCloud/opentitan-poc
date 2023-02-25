@@ -16,7 +16,10 @@
 #                 entry gives the required version.
 #
 __TOOL_REQUIREMENTS__ = {
-    'edalize': '0.2.0',
+    'edalize': {
+        'min_version': '0.2.0',
+        'as_needed': True
+    },
     'ninja': {
         'min_version': '1.8.2',
         'as_needed': True
