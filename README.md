@@ -1,4 +1,4 @@
-# OpenTitan
+# OpenTitan - Uffizzi Fork
 
 ![OpenTitan logo](https://docs.opentitan.org/doc/opentitan-logo.png)
 
