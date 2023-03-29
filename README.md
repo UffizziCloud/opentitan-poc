@@ -1,8 +1,8 @@
-# OpenTitan
+# OpenTitan on Uffizzi — PoC
 
 ![OpenTitan logo](https://docs.opentitan.org/doc/opentitan-logo.png)
 
-## About the project
+## About OpenTitan
 
 [OpenTitan](https://opentitan.org) is an open source silicon Root of Trust
 (RoT) project.  OpenTitan will make the silicon RoT design and implementation
@@ -13,25 +13,10 @@ quality, open IP for instantiation as a full-featured product. See the
 [OpenTitan site](https://opentitan.org/) and [OpenTitan
 docs](https://docs.opentitan.org) for more information about the project.
 
-## About this repository
+## About OpenTitan on Uffizzi
 
-This repository contains hardware, software and utilities written as part of the
-OpenTitan project. It is structured as monolithic repository, or "monorepo",
-where all components live in one repository. It exists to enable collaboration
-across partners participating in the OpenTitan project.
+This proof-of-concept is built as a prototype to run embedded systems on ephemeral environments powered by Uffizzi. These environments utilize the Dockerfile that comes with this project to install the software and hardware simulator on the ephemeral environment. A new ephemeral environment, with simulated OpenTitan hardware and OpenTitan software, will be spun-up for every PR opened against this repo. [Visit this blog](https://www.uffizzi.com/blog/simulated-ephemeral-cloud-environments-for-embedded-systems) to read about how these ephemeral environments for embedded systems work.
 
-## Documentation
+## About this Repository
 
-The project contains comprehensive documentation of all IPs and tools. You can
-access it [online at docs.opentitan.org](https://docs.opentitan.org/).
-
-## How to contribute
-
-Have a look at [CONTRIBUTING](https://github.com/lowRISC/opentitan/blob/master/CONTRIBUTING.md) and our [documentation on
-project organization and processes](https://docs.opentitan.org/doc/project/)
-for guidelines on how to contribute code to this repository.
-
-## Licensing
-
-Unless otherwise noted, everything in this repository is covered by the Apache
-License, Version 2.0 (see [LICENSE](https://github.com/lowRISC/opentitan/blob/master/LICENSE) for full text).
+Contains Uffizzi integration files to run OpenTitan on Uffizzi along with hardware, software and utilities written as part of the OpenTitan project. 
